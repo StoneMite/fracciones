@@ -1,0 +1,23 @@
+class Fraction:
+
+    numerator=0
+    denominator=1
+
+    def __init__(self,numerator,denominator):
+        self.numerator=numerator
+        self.denominator=denominator
+        print("numerador =",numerator)
+        print("denominador =",denominator)
+
+    def print(self):
+        print(self.numerator,"/",self.denominator)
+        
+    def multiplication(self,b):
+        numerator=self.numerator*b.numerator 
+        denominator=self.denominator*b.denominator 
+        r = Fraction(numerator,denominator)
+        r.print()
+
+a = Fraction(4,5)
+b = Fraction(6,8)        
+r.print()

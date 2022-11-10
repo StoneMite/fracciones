@@ -1,23 +1,74 @@
 class Fraction:
 
-    numerator=0
-    denominator=1
 
     def __init__(self,numerator,denominator):
         self.numerator=numerator
         self.denominator=denominator
-        print("numerador =",numerator)
-        print("denominador =",denominator)
+        print("numerador = ",numerator)
+        print("denominador = ",denominator)
 
+   
     def print(self):
-        print(self.numerator,"/",self.denominator)
+        print("Fraccion :",self.numerator,"/",self.denominator,"\n")
+
+    def adition(self,b):
+        print("___SUMA___")
+        numerator=(self.numerator*b.denominator)+(self.denominator*b.numerator)
+        denominator=self.denominator*b.denominator
+        r=Fraction(numerator,denominator)
+        r.print()
         
-    def multiplication(self,b):
-        numerator=self.numerator*b.numerator 
-        denominator=self.denominator*b.denominator 
-        r = Fraction(numerator,denominator)
+    def sustraction(self,b):
+        print("___RESTA___")
+        numerator=(self.numerator*b.denominator)-(self.denominator*b.numerator)
+        denominator=self.denominator*b.denominator
+        r=Fraction(numerator,denominator)
         r.print()
 
-a = Fraction(4,5)
-b = Fraction(6,8)        
-r.print()
+    def multi(self,b):
+        print("___MULTIPLICACION___")
+        numerator=self.numerator*b.numerator 
+        denominator=self.denominator*b.denominator 
+        r=Fraction(numerator,denominator)
+        r.print()
+        
+    def division(self,b):
+        print("___DIVISION___")
+        numerator=self.numerator*b.denominator
+        denominator=self.denominator*b.numerator
+        r=Fraction(numerator,denominator)
+        r.print()  
+
+
+x=int(input())
+y=int(input())
+a = Fraction(x,y)
+a.print()
+
+z=int(input()) 
+n=int(input())    
+b = Fraction(z,n)
+b.print()  
+
+print("operacion:")
+print("1)Suma")
+print("2)Resta")
+print("3)Multiplicacion")
+print("4)Division \n")
+
+i=int(input())
+
+if i == 1:
+    a.adition(b)
+
+if i == 2:
+    a.sustraction(b)
+
+if i == 3:
+    a.multi(b)
+
+if i == 4:
+    a.division(b)
+
+if i > 4 or i < 1:
+    print("opcion no valida")

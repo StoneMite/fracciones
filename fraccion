@@ -11,14 +11,14 @@ class Fraction:
     def print(self):
         print("Fraccion :",self.numerator,"/",self.denominator,"\n")
 
-    def adition(self,b):
+    def addition(self,b):
         print("___SUMA___")
         numerator=(self.numerator*b.denominator)+(self.denominator*b.numerator)
         denominator=self.denominator*b.denominator
         r=Fraction(numerator,denominator)
         r.print()
         
-    def sustraction(self,b):
+    def subtraction(self,b):
         print("___RESTA___")
         numerator=(self.numerator*b.denominator)-(self.denominator*b.numerator)
         denominator=self.denominator*b.denominator
@@ -59,10 +59,10 @@ print("4)Division \n")
 i=int(input())
 
 if i == 1:
-    a.adition(b)
+    a.addition(b)
 
 if i == 2:
-    a.sustraction(b)
+    a.subtraction(b)
 
 if i == 3:
     a.multi(b)

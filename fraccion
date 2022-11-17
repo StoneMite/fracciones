@@ -40,21 +40,17 @@ class Fraction:
         r.print()  
 
 
-x=int(input())
-y=int(input())
+x=int(input("numerador A: "))
+y=int(input("denominador A: ))
 a = Fraction(x,y)
 a.print()
 
-z=int(input()) 
-n=int(input())    
+z=int(input("numerador B: ")) 
+n=int(input("denominador B: "))    
 b = Fraction(z,n)
 b.print()  
 
-print("operacion:")
-print("1)Suma")
-print("2)Resta")
-print("3)Multiplicacion")
-print("4)Division \n")
+print("operacion: \n 1)Suma \n 2)Resta \n 3)Multiplicacion \n 4)Division \n")
 
 i=int(input())
 
